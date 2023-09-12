@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root
+{
+    --color-primary: #013b5e;
+    --color-primary-1: #011e30;
+    --color-reddy: #e60909;
+    --color-success: #50C878;
+    --color-warning:#F28C28;
+    --color-white: #fff;
+    --color-info-dark:#71797E;
+    --color-info-white:#F5F5DC;
+    --color-dark:#343644;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #697684;
+    --color-background: #f5f5f7;
+
+
+    --card-border-radius: 1.6rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.dark-theme{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0.4);
+    --box-shadow: 0rem 2rem 3rem var(--color-light);
+    --scroll-bar-color: #343644;
+    --color-primary: #F5F5DC;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'poppins', sans-serif;
+    font-size: 0.875rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    color: var(--color-primary);
+
+}
+
+.container {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+
+a {
+    color: var(--color-background); 
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 0.875rem;
+}
+
+h4 {
+    font-size: 0.8rem;
+}
+
+h5 {
+    font-size: 0.775rem;
+}
+
+small {
+    font-size: 0.75rem;
+}
+
+.text-muted {
+    color: var(--color-info-dark);
+}
+
+p { 
+    color: var(--color-dark-variant);
+}
+
+b {
+    color: var(--color-dark);
+}
+
+.primary {
+    color: var(--color-primary);
+}
+
+.reddy {
+    color: var(--color-reddy);
+}
+
+.success {
+    color: var(--color-success);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+
+aside {
+    height: 100vh;
+    background: var(--color-primary);
+    color: var(--color-background);
+    
+}
+
+aside .top{
+    background: var(--color-primary);
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 2.8rem;
+}
+
+aside .sidebar a{
+    display: flex;
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.8rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a ion-icon{
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 3rem;
+}
+
+aside .sidebar a.active{
+    background-color: rgba(132, 139, 200, 0.18);
+    color: var(--color-primary-1);
+    margin-left: 0;
+    border-radius: 0rem 0.9rem 0.9rem 0rem;
+}
+
+aside .sidebar a.active::before{
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary-1);
+}
+
+aside .sidebar a:hover{
+    color: var(--color-primary-1);
+}
+
+aside .sidebar a:hover ion-icon{
+    margin-left: 1rem;
+}
+
+/* car page */
+
+main{
+    margin-top: 1.4rem;
+
+}
+
+main .top{
+    display: flex;
+    justify-content: space-between;
+}
+
+main .gallery{
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card{
+    height: 300px;
+    margin: 25px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+    0 10px 10px rgba(0,0,0,0.22);
+    overflow: hidden;
+    border-radius: 15px;
+    transition: .4s;
+}
+
+.gallery{
+    display: flex;
+}
+
+img{
+    height: 200px;
+    border-radius: 15px;
+}
+
+
+main h2{
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+main p{
+    text-align: center;
+
+}
+
+.card:hover{
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgb(0,0,0,0.16),
+    0 3px 6px rgb(0,0,0,0.23);
+    transform: translate(0px, -7px);
+}
+
+
+main .top .theme{
+    margin-right: 4rem;
+    background: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+
+
+main .top .theme ion-icon{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .top .theme ion-icon.active{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--border-radius-1);
+}
+
+
+.right{
+    margin-top: 1.4rem;
+}
+
+.right .top{
+    display: block;
+    justify-content: end;
+    gap: 2rem;
+
+}
+
+.right .profile{
+    display: flex;
+    gap: 2rem;
+}
+
+.right .profile .info .smalls{
+    text-align: right;
+}
+
+.right .profile .photo ion-icon{
+    font-size: 2.7rem;
+    align-items: center;
+}
+
+
+
+
+
